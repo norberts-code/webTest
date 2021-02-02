@@ -161,6 +161,14 @@ body {
     height: 160px;
     margin: 0 auto;
 }
+.container::before{
+    display: block;
+    content:'Hover over these items:';
+    font-size:18px;
+    font-weight:bold;
+    text-align:center;
+    padding:15px;
+}
 
 .container span{
     display:inline-block;
