@@ -6,7 +6,8 @@
 }
 .mansDiv{
     text-align: left;
-    text-transform: uppercase
+    text-transform: uppercase;
+    color: red;
     
 }
  body {
