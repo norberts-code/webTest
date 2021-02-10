@@ -38,8 +38,8 @@
     padding-bottom: 70px;
   }
   .navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border: 0;
     border-radius: 0;
     margin-bottom: 0;
@@ -158,13 +158,12 @@ body {
     position:relative;
     text-align:left;
     padding:20px 0;
-    width:420px;
+    width:600px;
     height: 160px;
     margin: 0 auto;
 }
 .container::before{
     display: block;
-    content:'Hover over these items:';
     font-size:18px;
     font-weight:bold;
     text-align:center;
@@ -201,4 +200,14 @@ body {
 
 .container span:hover::before{
     opacity:1;
+}
+
+.sticky{
+    position:fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.sticky + .content{
+    padding-top: 60px;
 }
