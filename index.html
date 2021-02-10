@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="stils.css">
   <title>Norberts</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="stils.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="myNavbar2">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -22,7 +21,7 @@
       </button>
       <a class="navbar-brand" href="#">NN</a>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
+    <div class="collapse navbar-collapse" >
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">&lt;DIV&gt;</a></li>
         <li><a href="#">&lt;SPAN&gt;</a></li>
@@ -73,6 +72,7 @@
         <span data-title="Šis ir trešais lodziņš">Lodziņš</span>
         <span data-title="Šis ir ceturtais lodziņš">Lodziņš</span>
         </div>
+        <br/>
         <img src="https://raw.githubusercontent.com/norberts-code/webTest/master/kods3.png"/>
     </div>
     <div class="col-sm-4">
@@ -98,6 +98,19 @@
 <footer class="container-fluid bg-4 text-center">
   <p>Bootstrap Theme Made By <a href="https://www.w3schools.com">www.w3schools.com</a></p> 
 </footer>
-
+<script>
+    window.onscroll = function(){myFunction();};
+    var navbar = document.getElementById("myNavbar2");
+    var sticky = navbar.offsetTop;
+    function myFunction(){
+        
+        if(window.pageYOffset >= sticky){
+            navbar.classList.add("sticky");
+            console.log("text");
+        }else {
+            navbar.classList.remove("sticky");
+        }
+    }
+</script>
 </body>
 </html>
