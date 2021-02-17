@@ -208,6 +208,6 @@ body {
     width: 100%;
     z-index: 1;
 }
-.sticky + .content{
-    padding-top: 60px;
+.sticky + #fluids{
+    padding-top: 200px;
 }
