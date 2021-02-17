@@ -8,10 +8,22 @@
         <label for="log">Lodziņu n</label>
         <input type="text" id="log" name="log" value="">
         <button type="button" onclick="myFunction()">Aiziet!</button>
+        <br/>
         <script>
             function myFunction(){
                 var n = document.getElementById("log").value;
-                
+                var skait = 1;
+                for(var i=0;i<n;i++){
+                    for(var j=0;j<n;j++){
+                        var button2 = document.createElement("button");
+                        var text = document.createTextNode(skait);
+                        skait++;
+                        button2.appendChild(text);
+                        document.body.appendChild(button2);
+                    }
+                    var blankLine = document.createElement("br");
+                    document.body.appendChild(blankLine);
+                }
             }
             
             
