@@ -1,5 +1,7 @@
 <html>
     <head>
+        <link rel="stylesheet" href="stils.css">
+
         <title>Lodziņi</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +11,9 @@
         <input type="text" id="log" name="log" value="">
         <button type="button" onclick="myFunction()">Aiziet!</button>
         <br/>
+        <div id="buttonDiv" style="width: 1000px; height: 1000px">
+            
+        </div>
         <script>
             function myFunction(){
                 var n = document.getElementById("log").value;
@@ -17,19 +22,15 @@
                     for(var j=0;j<n;j++){
                         var button2 = document.createElement("button");
                         var text = document.createTextNode(skait);
+                        button2.classList.add("buttonStyle");
                         skait++;
                         button2.appendChild(text);
-                        document.body.appendChild(button2);
+                        document.getElementById("buttonDiv").appendChild(button2);
                     }
                     var blankLine = document.createElement("br");
-                    document.body.appendChild(blankLine);
+                    document.getElementById("buttonDiv").appendChild(blankLine);
                 }
             }
-            
-            
-            
-            
-            
         </script>
     </body>
 </html>
