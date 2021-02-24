@@ -7,7 +7,7 @@
 .mansDiv{
     text-align: left;
     text-transform: uppercase;
-    color: red;
+    color: red;   
     
 }
  body {
@@ -210,4 +210,13 @@ body {
 }
 .sticky + #fluids{
     padding-top: 200px;
+}
+.buttonStyle{
+  background-color: #4CAF50;
+  width: 10%;
+  height: 10%;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }
