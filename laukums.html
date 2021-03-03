@@ -15,21 +15,71 @@
             
         </div>
         <script>
+            var firstTime = true;
+            var vertibas3;
+            var sakums=false;
+            var pirmajamID, otrajamID;
+            var vertibas;
             function myFunction(){
                 var n = document.getElementById("log").value;
                 var skait = 1;
+                vertibas = ['logaritms', 'integrālis','funkcija','saskaitīšana','reizināšana','dalīšana','atņemšana','modulis','log', '∫','f(x)','+','*',':','-','||'];
+                var vertibas3 = ['','','','','','','','','','','','','','','',''];
+                for(var g=0;g<n*n;g++){
+                    //0;1;2;3;4;5;6;7
+                    while(true){
+                        var alreadyHas = false;
+                        ran=getRandomInt(n*n);
+                        for(var z=0;z<g;z++){
+                            if(vertibas3[z]===ran){
+                                alreadyHas=true;
+                                break;
+                            }
+                        }
+                        if(!alreadyHas){
+                            vertibas3[g]=ran;
+                            break;
+                        }  
+                    }
+                }
                 for(var i=0;i<n;i++){
                     for(var j=0;j<n;j++){
                         var button2 = document.createElement("button");
-                        var text = document.createTextNode(skait);
+                        var text = document.createTextNode(vertibas[vertibas3[skait-1]]);
                         button2.classList.add("buttonStyle");
-                        skait++;
                         button2.appendChild(text);
+                        button2.setAttribute('onclick',"poguFunction(this)");
+                        button2.id=vertibas3[skait-1];
+                        skait++;
                         document.getElementById("buttonDiv").appendChild(button2);
                     }
                     var blankLine = document.createElement("br");
                     document.getElementById("buttonDiv").appendChild(blankLine);
                 }
+            }
+            function getRandomInt(max) {
+                return Math.floor(Math.random() * Math.floor(max));
+            }
+            function poguFunction(x){
+                if(firstTime){
+                    if(sakums){
+                        document.getElementById(pirmajamID).className="buttonStyle";
+                        document.getElementById(otrajamID).className="buttonStyle";
+                    }
+                    x.className="newButtonStyle";
+                    firstTime=false;
+                    pirmajamID = x.id;
+                }
+                else{
+                    x.className="newButtonStyle";
+                    otrajamID = x.id;
+                    firstTime=true;
+                    sakums=true;
+                    if(vertibas[Number.parseInt(pirmajamID)+8]===vertibas[Number.parseInt(otrajamID)]||vertibas[Number.parseInt(pirmajamID)-8]===vertibas[Number.parseInt(otrajamID)]){
+                        sakums=false;
+                    }
+                }
+                
             }
         </script>
     </body>
