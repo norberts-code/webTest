@@ -229,3 +229,13 @@ body {
   text-decoration: none;
   display: inline-block;
 }
+.finalButtonStyle{
+  background-color: #4CAF50;
+  width: 10%;
+  height: 10%;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  pointer-events: none;
+}
