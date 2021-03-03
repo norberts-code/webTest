@@ -77,6 +77,8 @@
                     sakums=true;
                     if(vertibas[Number.parseInt(pirmajamID)+8]===vertibas[Number.parseInt(otrajamID)]||vertibas[Number.parseInt(pirmajamID)-8]===vertibas[Number.parseInt(otrajamID)]){
                         sakums=false;
+                        document.getElementById(pirmajamID).className="finalButtonStyle";
+                        document.getElementById(otrajamID).className="finalButtonStyle";
                     }
                 }
                 
