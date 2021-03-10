@@ -5,26 +5,21 @@
         <title>Lodziņi</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <label for="log">Lodziņu n</label>
-        <input type="text" id="log" name="log" value="">
-        <button type="button" onclick="myFunction()">Aiziet!</button>
-        <br/>
-        <div id="buttonDiv" style="width: 1000px; height: 1000px">
-            
-        </div>
         <script>
             var firstTime = true;
             var vertibas3;
             var sakums=false;
             var pirmajamID, otrajamID;
             var vertibas;
+            var n;
+            var beigas;
             function myFunction(){
-                var n = document.getElementById("log").value;
+                n = document.getElementById("log").value;
                 var skait = 1;
-                vertibas = ['logaritms', 'integrālis','funkcija','saskaitīšana','reizināšana','dalīšana','atņemšana','modulis','log', '∫','f(x)','+','*',':','-','||'];
-                var vertibas3 = ['','','','','','','','','','','','','','','',''];
+                beigas=0;
+                vertibas = ['LOGARITMS','log','FUNKCIJA','f(x)','REIZINĀŠANA','*','ATŅEMŠANA','-','INTEGRĀLIS', '∫','SKAITĪŠANA','+','DALĪŠANA',':','MODULIS','||','FAKTORIĀLS','!','BEZGALĪBA','∞','PI','π','PROCENTI','%','SAKNE','√','SUMMA','Σ','IEKAVAS','()','LIELĀKS','>','MAZĀKS','<','TUKŠA KOPA','∅'];
+                salidzin = ['log','LOGARITMS','f(x)','FUNKCIJA','*','REIZINĀŠANA','-','ATŅEMŠANA','∫','INTEGRĀLIS','+','SKAITĪŠANA',':','DALĪŠANA','||','MODULIS','!','FAKTORIĀLS','∞','BEZGALĪBA','π','PI','%','PROCENTI','√','SAKNE','Σ','SUMMA','()','IEKAVAS','>','LIELĀKS','<','MAZĀKS','∅','TUKŠA KOPA'];
+                var vertibas3 = ['','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','','',''];
                 for(var g=0;g<n*n;g++){
                     //0;1;2;3;4;5;6;7
                     while(true){
@@ -75,14 +70,27 @@
                     otrajamID = x.id;
                     firstTime=true;
                     sakums=true;
-                    if(vertibas[Number.parseInt(pirmajamID)+8]===vertibas[Number.parseInt(otrajamID)]||vertibas[Number.parseInt(pirmajamID)-8]===vertibas[Number.parseInt(otrajamID)]){
+                    if(vertibas[Number.parseInt(pirmajamID)]===salidzin[Number.parseInt(otrajamID)]){
                         sakums=false;
                         document.getElementById(pirmajamID).className="finalButtonStyle";
                         document.getElementById(otrajamID).className="finalButtonStyle";
+                        beigas++;
                     }
+                    if(beigas===n*n/2){
+                        alert('Uzvara'); 
+                   }
                 }
-                
             }
         </script>
+    </head>
+    <body>
+        <label for="log">n</label>
+        <input type="number" step="2" min="2" max="6" id="log" name="log" value="">
+        <button type="button" onclick="myFunction()">Aiziet!</button>
+        <br/>
+        <div id="buttonDiv" style="width: 1000px; height: 1000px">
+            
+        </div>
+        
     </body>
 </html>
