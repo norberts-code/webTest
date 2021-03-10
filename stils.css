@@ -213,8 +213,8 @@ body {
 }
 .buttonStyle{
   background-color: #4CAF50;
-  width: 10%;
-  height: 10%;
+  width: 12%;
+  height: 12%;
   color: #4CAF50;
   text-align: center;
   text-decoration: none;
@@ -222,8 +222,8 @@ body {
 }
 .newButtonStyle{
   background-color: #4CAF50;
-  width: 10%;
-  height: 10%;
+  width: 12%;
+  height: 12%;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -231,9 +231,10 @@ body {
 }
 .finalButtonStyle{
   background-color: #4CAF50;
-  width: 10%;
-  height: 10%;
-  color: white;
+  width: 12%;
+  height: 12%;
+  color: #8b32a8;
+  font-weight: 900;
   text-align: center;
   text-decoration: none;
   display: inline-block;
