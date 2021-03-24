@@ -240,3 +240,6 @@ body {
   display: inline-block;
   pointer-events: none;
 }
+.liels{
+    font-size:100px;
+}
